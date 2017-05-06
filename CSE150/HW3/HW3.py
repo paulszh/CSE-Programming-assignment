@@ -1,5 +1,7 @@
 import collections
-
+import math
+import matplotlib.pyplot as plt
+import numpy as np
 
 word_dict = {}
 word_dict_biagram = {}	#used for Part b
@@ -51,7 +53,7 @@ with open ('bigram.txt') as f3:
 			word_frequency[int(b_data[1])-1] = int(b_data[2])
 			
 
-print (b_count)
+print (b_count,"\n")
 #print (word_idx)		
 #print (word_frequency)
 word_dict_biagram = dict(zip(word_idx,word_frequency))
@@ -67,17 +69,17 @@ for word_pair in sorted(word_dict_biagram.items(), key=lambda x: x[1],reverse=Tr
 #Part(c)
 sentence = '<s> THE MARKET FELL BY ONE HUNDRED POINTS LAST WEEK.'
 sentence_list = sentence.replace('.',' ').split()
-print (sentence_list)
+print ("\n",sentence_list)
 
 #Unigram probability: 
 uni_prob = 1.0;
 
 
-print (sentence_list[0])
+#print (sentence_list[0])
 for i in range (1,len(sentence_list)):
 	uni_prob = uni_prob * float(word_dict[sentence_list[i]])
 	
-print ("unigram probability:",	"{:.3e}".format(uni_prob))
+print ("unigram probability:",	"{:.5f}".format(math.log(uni_prob)))
 
 b_count = 0
 w_count = 1
@@ -95,13 +97,71 @@ for k, v in word_pair_biagram.items():
 	
 #print(word_pair_biagram[(word_to_idx['ONE'],'ONE','HUNDRED')])	
 #print(word_pair_biagram[(word_to_idx['ONE'],'ONE','OF')])	
+def calculate_bigram_prob(sentence_list):
+	bigram_prob = 1.0
+	for i in range (0,len(sentence_list)-1):
+		if((word_to_idx[sentence_list[i]],sentence_list[i],sentence_list[i+1]) in word_pair_biagram):
+			bigram_prob *= word_pair_biagram[(word_to_idx[sentence_list[i]],sentence_list[i],sentence_list[i+1])]
+		else:
+			bigram_prob = bigram_prob * 0 
+			print("The following patterns are not observed in training set:", sentence_list[i],sentence_list[i+1])
+	if(bigram_prob > 0):
+		print("bigram probability:", "{:.5f}".format(math.log(bigram_prob)))
+	else:
+		print("bigram probability:", "{:.5f}".format(0.0))
 	
-bigram_prob = 1.0;
-for i in range (0,len(sentence_list)-1):
-#	print(sentence_list[i], sentence_list[i+1])
-	bigram_prob *= word_pair_biagram[(word_to_idx[sentence_list[i]],sentence_list[i],sentence_list[i+1])]
 
-print("bigram probability:", "{:.3e}".format(bigram_prob))
+
+calculate_bigram_prob(sentence_list)
+
+#Part d: 
+del sentence_list[:];
+uni_prob = 1.0
+sentence = "<s> THE FOURTEEN OFFICIALS SOLD FIRE INSURANCE."
+sentence_list = sentence.replace('.',' ').split()
+for i in range (1,len(sentence_list)):
+	uni_prob = uni_prob * float(word_dict[sentence_list[i]])
+
+print ("")
+print ("unigram probability:","{:.5f}".format(math.log(uni_prob)))
+
+calculate_bigram_prob(sentence_list)
+
+
+def get_bigram_prob(i):
+	if((word_to_idx[sentence_list[i]],sentence_list[i],sentence_list[i+1]) in word_pair_biagram):
+		return word_pair_biagram[(word_to_idx[sentence_list[i]],sentence_list[i],sentence_list[i+1])]
+	else:
+		return 0.0
+
+l_step = np.linspace(0,1,1000,False)
+plot_y = []
+prob_dic = {}
+
+for l in l_step:
+	temp = 0.0
+	for i in range(0,len(sentence_list)-1):
+		temp += math.log((1-l)*float(word_dict[sentence_list[i+1]]) + l*get_bigram_prob(i))
+	
+	prob_dic[l] = temp
+	plot_y.append(temp)
+
+for word_pair in sorted(prob_dic.items(), key=lambda x: x[1],reverse=True)[:1]:
+	maximum = word_pair
+
+
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.scatter(maximum[0],maximum[1],40)
+#max_label = 
+ax.plot(l_step, plot_y,'-g')
+ax.annotate('({:.2f}, {:.2f})'.format(maximum[0], maximum[1]), xy=(maximum[0], maximum[1]), xytext=(maximum[0], maximum[1]))
+plt.xlabel("lambda")
+plt.ylabel("log-likelihood")
+plt.show()
+
+
+
 
 
 #print ("Starting calculating biagram probability")
