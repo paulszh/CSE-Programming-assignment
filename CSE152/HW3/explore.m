@@ -13,7 +13,7 @@ function [] = explore(x,y,image)
                 continue;
             else 
                 if(x + i > 0) && (y + j > 0) && (x + i <= h) && (y + j <= w)
-                    if(image(x+i,y+j) == 1 && mark(x+i,y+j) == -1)
+                    if(image(x+i,y+j) == 1 && mark(x+i,y+j) == 0)
                         explore(x+i,y+j,image);
                     end
                 end
