@@ -1,6 +1,6 @@
 function [output] = central_moment(input,j,k,d)
-    x_avg = (moment(input,1,0,d))/(moment(input,0,0,d));
-    y_avg = (moment(input,0,1,d))/(moment(input,0,0,d));
+    x_avg = double((moment(input,1,0,d))/(moment(input,0,0,d)));
+    y_avg = double((moment(input,0,1,d))/(moment(input,0,0,d)));
     
     [h,w] = size(input);
     M = 0;
@@ -13,7 +13,8 @@ function [output] = central_moment(input,j,k,d)
         end
     end
     
+    fprintf('x_avg,y_avg %d, %d\n', x_avg,y_avg);
     output = M;
     
-    
+   
 end

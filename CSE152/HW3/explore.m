@@ -1,3 +1,4 @@
+%A helper function that explore all the neighbors 
 function [] = explore(x,y,image)
    global marker;
    global mark;
@@ -10,7 +11,7 @@ function [] = explore(x,y,image)
    for i = -1 : 1
         for j = -1 : 1
             if(i == 0) && (j == 0)
-                continue;
+               continue;
             else 
                 if(x + i > 0) && (y + j > 0) && (x + i <= h) && (y + j <= w)
                     if(image(x+i,y+j) == 1 && mark(x+i,y+j) == 0)

@@ -1,14 +1,16 @@
+%The function that using otus method to binarize an input image
 function [ result_image] = binarization_otus(input_image)
  
 w = histcounts(input_image,256);
 [height,width] = size(input_image);
-pixel_number = 168 * 241;
+pixel_number = height * width;
 result_image = false(height,width); %initalize the result_image to black
 
 w0 = 0;
 maximum = 0.0;
 sum = 0;
 sum0 = 0;
+level = 0;
 %calculaing sum i * p(i)
 for i = 1 : 256
    sum = sum + w(i) * (i-1);
@@ -32,8 +34,8 @@ for t=1:256
     end
 end
 
-disp(level);
-disp(maximum);
+% disp(level);
+% disp(maximum);
 
 %set all the pixel less than the threshold to 0 
 for x = 1 : height
