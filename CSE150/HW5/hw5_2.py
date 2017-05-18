@@ -48,7 +48,6 @@ def y_given_x():
 		y_giv_x[t] = product;
 
 	
-
 def log_likelihood():
 	y_given_x()
 	L = float(0)
@@ -59,8 +58,7 @@ def log_likelihood():
 			L += math.log(1-y_giv_x[i])
 	return L/len(y_table)
 				
-#print(y_given_x(1))
-#print(o_log_likelihood())
+
 def get_num_mistakes():
 	count = int(0)
 	for t in range (len(y_table)):
@@ -70,31 +68,26 @@ def get_num_mistakes():
 			count+=1
 	
 	return count
-		
-	
-	
-	
+			
 def EM_Algorithm(iter):
 	for i in range (0,iter):
-		L = log_likelihood();
-#		print('num of mistakes: ', get_num_mistakes())
+		L = log_likelihood();	#Estep
+
 		ML.append(L);
 		MS.append(get_num_mistakes())
 		#For each column
-		for j in range(0,len(x_table[0])):
-			p_i[j] = EM_upate(j);
-			
+		for j in range(0,len(x_table[0])):  #Mstep
+			p_i[j] = EM_upate(j);	
+
+#printing the logliklihood at 1, 2 ,4 ..... 512 iterations			
 def print_result():
-	print (ML[0],MS[0]);
-	for i in range (0,9):
-		print (str(ML[2**i]),str(MS[2**i]))
-EM_Algorithm(512)	
+	print (0, ':', ML[0],MS[0]);
+	for i in range (0,10):
+		print (str(2**i), ':', str(ML[2**i]),str(MS[2**i]))
+
+
+EM_Algorithm(513)	
 print_result()
-#
-#
-#print (ML[1])
-#print (ML[2]);
-#print (ML[3]);
 
 		
 	
