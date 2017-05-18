@@ -7,6 +7,7 @@ x_table = []
 y_table = []
 p_i = []
 ML = []
+MS = []
 y_giv_x = [None] * 267
 
 #Read data from File
@@ -25,7 +26,7 @@ with open('hw5_noisyOr_y.txt') as f2:
 	
 for idx in range (0,len(x_table[0])):
 	p_i.append(float(1/23))
-		
+ 		
 def EM_upate(column):
 	pi = float(0)
 	count_x = 0;
@@ -60,22 +61,40 @@ def log_likelihood():
 				
 #print(y_given_x(1))
 #print(o_log_likelihood())
+def get_num_mistakes():
+	count = int(0)
+	for t in range (len(y_table)):
+		if(y_giv_x[t] >= 0.5 and y_table[t] == 0):
+			count+=1
+		if(y_giv_x[t] <= 0.5 and y_table[t] == 1):
+			count+=1
+	
+	return count
+		
+	
+	
 	
 def EM_Algorithm(iter):
 	for i in range (0,iter):
 		L = log_likelihood();
+#		print('num of mistakes: ', get_num_mistakes())
 		ML.append(L);
+		MS.append(get_num_mistakes())
 		#For each column
 		for j in range(0,len(x_table[0])):
 			p_i[j] = EM_upate(j);
 			
-		
-EM_Algorithm(4)	
+def print_result():
+	print (ML[0],MS[0]);
+	for i in range (0,9):
+		print (str(ML[2**i]),str(MS[2**i]))
+EM_Algorithm(512)	
+print_result()
 #
-print (ML[0]);
-print (ML[1]);
-print (ML[2]);
-print (ML[3]);
+#
+#print (ML[1])
+#print (ML[2]);
+#print (ML[3]);
 
 		
 	
