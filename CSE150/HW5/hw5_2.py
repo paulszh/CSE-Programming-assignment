@@ -76,8 +76,9 @@ def EM_Algorithm(iter):
 		ML.append(L);
 		MS.append(get_num_mistakes())
 		#For each column
-		for j in range(0,len(x_table[0])):  #Mstep
-			p_i[j] = EM_upate(j);	
+		if(i != iter-1):
+			for j in range(0,len(x_table[0])):  #Mstep
+				p_i[j] = EM_upate(j);	
 
 #printing the logliklihood at 1, 2 ,4 ..... 512 iterations			
 def print_result():
@@ -86,8 +87,12 @@ def print_result():
 		print (str(2**i), ':', str(ML[2**i]),str(MS[2**i]))
 
 
-EM_Algorithm(513)	
+EM_Algorithm(513)
+for i in range (len(x_table[0])):
+	print ('p_i[',i,']', p_i[i])	
 print_result()
+
+
 
 		
 	
