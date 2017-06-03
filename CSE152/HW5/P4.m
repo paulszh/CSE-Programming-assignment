@@ -1,0 +1,1 @@
+% Perform PCA to get basis vector(1(N-c)
