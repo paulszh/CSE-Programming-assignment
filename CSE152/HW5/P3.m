@@ -61,32 +61,37 @@ figure,imshow(combined_image,[]);
 
 
 %test labels
-W = U';
-%first project image into k dimension
-k_testset1 = W * testset_1;
-k_trainset = W * trainset;
 
 
+%image in trainset and testset are both row vectors
+[predicted1, error_rate_1] = eigenTest(trainset', trainlabel, testset_1',...
+     testlabel_1,U,mu,20);
+ [predicted2, error_rate_2] = eigenTest(trainset', trainlabel, testset_2',...
+     testlabel_2,U,mu,20);
+ [predicted3, error_rate_3] = eigenTest(trainset', trainlabel, testset_3',...
+     testlabel_3,U,mu,20);
+[predicted4, error_rate_4] = eigenTest(trainset', trainlabel, testset_4',...
+     testlabel_4,U,mu,20);
 
-[H,W] = size(k_trainset);
-[h1,w1] = size(k_testset);
+%discard top 4 eigenvectors
+U1 = U(:,5:20);
 
-predicted_label = zeros(h1,1);
+[predicted1_1, error_rate_1_1] = eigenTest(trainset', trainlabel, testset_1',...
+     testlabel_1,U1,mu,16);
+ [predicted2_2, error_rate_2_2] = eigenTest(trainset', trainlabel, testset_2',...
+     testlabel_2,U1,mu,16);
+ [predicted3_3, error_rate_3_3] = eigenTest(trainset', trainlabel, testset_3',...
+     testlabel_3,U1,mu,16);
+[predicted4_4, error_rate_4_4] = eigenTest(trainset', trainlabel, testset_4',...
+     testlabel_4,U1,mu,16);
 
-for i = 1 : h1   %for each image in testset
-   min = Inf;
-   for j = 1 : H
-       l2 = l2_norm(testset(i,:), trainset(j,:));
-       %find the label with least l2 norm
-       if(l2 < min)
-            min = l2;
-            predicted_label(i) = trainlabel(j);
-       end
-   end
-end
 
-temp = mu;
-for i = 1 : k
-   temp = temp + pc(i)*U(:,i);        
-end
+figure,plot(error_rate_1_1);
+hold on
+plot(error_rate_2_2)
+hold on
+plot(error_rate_3_3)
+hold on 
+plot(error_rate_4_4)
+hold off
 

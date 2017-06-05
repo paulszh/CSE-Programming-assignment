@@ -1,6 +1,6 @@
 function plot_image(orig_image, U,mu)
     
-pc_score = U' * orig_image; 
+pc_score = U' * orig_image; %here orig_image has already be subtracted by a mean vector
 
 figure
 subplot(2,5,1)

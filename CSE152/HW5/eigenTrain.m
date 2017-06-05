@@ -4,7 +4,7 @@ function [W,mu]=eigenTrain(trainset,k)
     [h,w] = size(trainset);
 
     mu_image = reshape(mu, 50,50);
-    figure, imshow(mu_image,[]);
+%     figure, imshow(mu_image,[]);
 
     n = size(trainset,2);
     D = zeros(h,w);
