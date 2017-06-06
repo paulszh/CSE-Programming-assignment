@@ -1,14 +1,12 @@
 function [predicted_label,error_rate] = eigen_naive_recognition_error_rate(...
     trainset, trainlabel,testset, testlabel,k)
   
-  
-  
     testset_k = testset(:,1:k);
     trainset_k = trainset(:,1:k);
     H = size(trainset_k,1);
     h1 = size(testset_k,1);
     predicted_label = zeros(h1,1);
-    disp(size(testset_k))
+   
 
     for i = 1 : h1   %for each image in testset
        min = Inf;

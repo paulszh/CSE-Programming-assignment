@@ -62,7 +62,6 @@ figure,imshow(combined_image,[]);
 
 %test labels
 
-
 %image in trainset and testset are both row vectors
 [predicted1, error_rate_1] = eigenTest(trainset', trainlabel, testset_1',...
      testlabel_1,U,mu,20);
@@ -72,10 +71,19 @@ figure,imshow(combined_image,[]);
      testlabel_3,U,mu,20);
 [predicted4, error_rate_4] = eigenTest(trainset', trainlabel, testset_4',...
      testlabel_4,U,mu,20);
+ 
+figure,plot(error_rate_1);
+axis([1 16 0 1])
+hold on
+plot(error_rate_2)
+hold on
+plot(error_rate_3)
+hold on 
+plot(error_rate_4)
+hold off
 
 %discard top 4 eigenvectors
 U1 = U(:,5:20);
-
 [predicted1_1, error_rate_1_1] = eigenTest(trainset', trainlabel, testset_1',...
      testlabel_1,U1,mu,16);
  [predicted2_2, error_rate_2_2] = eigenTest(trainset', trainlabel, testset_2',...
@@ -87,6 +95,7 @@ U1 = U(:,5:20);
 
 
 figure,plot(error_rate_1_1);
+axis([1 16 0 1])
 hold on
 plot(error_rate_2_2)
 hold on
