@@ -1,0 +1,9 @@
+
+State Machine - |super_hash_processor|state
+Name state.START_NEXT_BLOCK state.WRITE state.COMPUTE state.READ_2 state.READ_1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.READ_1 0 0 0 0 1 1 
+state.READ_2 0 0 0 1 0 1 
+state.COMPUTE 0 0 1 0 0 1 
+state.WRITE 0 1 0 0 0 1 
+state.START_NEXT_BLOCK 1 0 0 0 0 1 

@@ -1,0 +1,167 @@
+vlog -reportprogress 300 -work work {D:/Study/ECE 111/Project4/sha1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:41:42 on Feb 20,2017
+# vlog -reportprogress 300 -work work D:/Study/ECE 111/Project4/sha1.sv 
+# -- Compiling module sha1
+# 
+# Top level modules:
+# 	sha1
+# End time: 15:41:42 on Feb 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work {D:/Study/ECE 111/Project4/tb_sha1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:41:42 on Feb 20,2017
+# vlog -reportprogress 30 -work work D:/Study/ECE 111/Project4/tb_sha1.sv 
+# -- Compiling module tb_sha1
+# 
+# Top level modules:
+# 	tb_sha1
+# End time: 15:41:42 on Feb 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.tb_sha1
+# Loading work.sha1
+run -all
+# -----------
+# 
+# Messagetext
+# 
+# -----------
+# 
+# 01234567
+# 
+# 02468ace
+# 
+# 048d159c
+# 
+# 091a2b38
+# 
+# 12345670
+# 
+# 2468ace0
+# 
+# 48d159c0
+# 
+# 91a2b380
+# 
+# 23456701
+# 
+# 468ace02
+# 
+# 8d159c04
+# 
+# 1a2b3809
+# 
+# 34567012
+# 
+# 68ace024
+# 
+# d159c048
+# 
+# a2b38091
+# 
+# 45670123
+# 
+# 8ace0246
+# 
+# 159c048d
+# 
+# 2b38091a
+# 
+# 56701234
+# 
+# ace02468
+# 
+# 59c048d1
+# 
+# b38091a2
+# 
+# 67012345
+# 
+# ce02468a
+# 
+# 9c048d15
+# 
+# 38091a2b
+# 
+# 70123456
+# 
+# e02468ac
+# 
+# message size in byte:        120
+# number_of_blocks is     3
+# Correct hash: 000e2e8cded75694d9260f71394a8d32db4b162b
+# Correct hash: c78657eda89b0e6b170cac0f8a716222a9fa6964
+# Correct hash: 225529f65f7e776f5e23d7e6ea0d94c9395e0da9
+# READ: 67452301 WITH IDX:   0
+# READ: ce8a4602 WITH IDX:   1
+# READ: 9c158d04 WITH IDX:   2
+# READ: 382b1a09 WITH IDX:   3
+# READ: 70563412 WITH IDX:   4
+# READ: e0ac6824 WITH IDX:   5
+# READ: c059d148 WITH IDX:   6
+# READ: 80b3a291 WITH IDX:   7
+# READ: 01674523 WITH IDX:   8
+# READ: 02ce8a46 WITH IDX:   9
+# READ: 049c158d WITH IDX:  10
+# READ: 09382b1a WITH IDX:  11
+# READ: 12705634 WITH IDX:  12
+# READ: 24e0ac68 WITH IDX:  13
+# READ: 48c059d1 WITH IDX:  14
+# READ: 9180b3a2 WITH IDX:  15
+# number_of_blocks =     3, number_of_last_bytes =  56
+# hash_code out in IDLE: 000e2e8cded75694d9260f71394a8d32db4b162b
+# Preparing for next block
+# READ: 23016745 WITH IDX:   0
+# READ: 4602ce8a WITH IDX:   1
+# READ: 8d049c15 WITH IDX:   2
+# READ: 1a09382b WITH IDX:   3
+# READ: 34127056 WITH IDX:   4
+# READ: 6824e0ac WITH IDX:   5
+# READ: d148c059 WITH IDX:   6
+# READ: a29180b3 WITH IDX:   7
+# READ: 45230167 WITH IDX:   8
+# READ: 8a4602ce WITH IDX:   9
+# READ: 158d049c WITH IDX:  10
+# READ: 2b1a0938 WITH IDX:  11
+# READ: 56341270 WITH IDX:  12
+# READ: ac6824e0 WITH IDX:  13
+# READ: xxxxxxxx
+# number_of_blocks =     2, number_of_last_bytes =   0
+# hash_code out in IDLE: c78657eda89b0e6b170cac0f8a716222a9fa6964
+# Preparing for next block
+# number_of_blocks =     1, number_of_last_bytes =   0
+# hash_code out in write state: 225529f65f7e776f5e23d7e6ea0d94c9395e0da9
+# hash_code out in write state: 225529f65f7e776f5e23d7e6ea0d94c9395e0da9
+# hash_code out in write state: 225529f65f7e776f5e23d7e6ea0d94c9395e0da9
+# hash_code out in write state: 225529f65f7e776f5e23d7e6ea0d94c9395e0da9
+# hash_code out in write state: 225529f65f7e776f5e23d7e6ea0d94c9395e0da9
+# hash_code out in write state: 225529f65f7e776f5e23d7e6ea0d94c9395e0da9
+# -----------------------
+# 
+# correct hash result is:
+# 
+# -----------------------
+# 
+# 225529f65f7e776f5e23d7e6ea0d94c9395e0da9
+# 
+# -----------------------
+# 
+# Your result is:        
+# 
+# -----------------------
+# 
+# 225529f65f7e776f5e23d7e6ea0d94c9395e0da9
+# 
+# ***************************
+# 
+# Congratulations! You have the correct hash result!
+# 
+# Total number of cycles:         326
+# 
+# 
+# ***************************
+# 
+# ** Note: $stop    : D:/Study/ECE 111/Project4/tb_sha1.sv(243)
+#    Time: 6570 ps  Iteration: 2  Instance: /tb_sha1
+# Break in Module tb_sha1 at D:/Study/ECE 111/Project4/tb_sha1.sv line 243

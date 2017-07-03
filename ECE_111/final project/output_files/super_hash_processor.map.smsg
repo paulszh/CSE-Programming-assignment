@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at super_hash_processor.sv(111): always construct contains both blocking and non-blocking assignments File: C:/Users/szh/Documents/ECE_111/final project/super_hash_processor.sv Line: 111
