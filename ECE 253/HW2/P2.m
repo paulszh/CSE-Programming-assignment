@@ -5,11 +5,15 @@ imshow(image);
 
 SE = strel('disk',5);
 circle = imopen(image,SE);
-figure,imshow(circle);
+write = figure;
+imshow(circle);
+saveas(write,'circle_only.jpg')
 
 %find the connected components
 ccCircles = bwlabel(circle);
-figure, imagesc(ccCircles);
+write = figure;
+imagesc(ccCircles);
+saveas(write,'connect_component_circles.jpg');
 
 %calculate the area for each connected componenets
 numElement = max(ccCircles(:));
@@ -39,9 +43,14 @@ imageLine = imread('lines.jpg');
 imageLine = imbinarize(rgb2gray(imageLine),0.4);
 SE = strel('line',20,90);
 line = imopen(imageLine,SE);
-figure,imshow(line);
+write = figure;
+imshow(line);
+saveas(write, 'line_only.jpg');
+
 ccLines = bwlabel(line);
-figure, imagesc(ccLines);
+write = figure;
+imagesc(ccLines);
+saveas(write, 'connected_component_lines.jpg');
 
 %calculate the area for each connected componenets
 numElement = max(ccLines(:));

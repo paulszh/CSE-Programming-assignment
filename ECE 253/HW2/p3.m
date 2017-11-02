@@ -28,21 +28,26 @@ figure, imshow(diver);
 % end
 x = 1 : 1 :7;
 [lenaUniformMSE, lenaLloydMSE] = calculateMSE(lena);
-figure,bar(x, [lenaUniformMSE, lenaLloydMSE]);
+bar_pic = figure;
+bar(x, [lenaUniformMSE, lenaLloydMSE]);
 title('lena MSE');
+saveas(bar_pic ,'p3_lena_bar_MSE.jpg')
 [diverUniformMSE, diverLloydMSE] = calculateMSE(diver);
-figure,bar(x, [diverUniformMSE, diverLloydMSE]);
+bar_pic = figure;
+bar(x, [diverUniformMSE, diverLloydMSE]);
 title('diver MSE');
+saveas(bar_pic ,'p3_diver_bar_MSE.jpg')
 
 lenahistEq = histeq(lena,256);
 diverhistEq = histeq(diver,256);
 [histLenaUniformMSE, histLenaLloydMSE] = calculateMSE(lenahistEq);
-figure,bar(x, [histLenaUniformMSE, histLenaLloydMSE]);
+bar_pic = figure;
+bar(x, [histLenaUniformMSE, histLenaLloydMSE]);
 title('lena MSE after histeq');
+saveas(bar_pic ,'p3_lena_bar_hist_MSE.jpg')
 [histDiverUniformMSE, histDiverLloydMSE] = calculateMSE(diverhistEq);
-figure,bar(x, [histDiverUniformMSE, histDiverLloydMSE]);
+bar_pic = figure;
+bar(x, [histDiverUniformMSE, histDiverLloydMSE]);
 title('diver MSE after histeq');
+saveas(bar_pic ,'p3_diver_bar_hist_MSE.jpg')
 
-
-% trainSet1 = reshape(lena, Size(lena,1) * Size(lena,2), );
-% trainSet2 = reshape(lena, Size(driver,1) * );
