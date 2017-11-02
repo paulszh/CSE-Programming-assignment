@@ -1,5 +1,6 @@
 image = imread('circles_lines.jpg');
 image = rgb2gray(image);        %do we need to convert to gray scale first?
+image = imbinarize(image);
 imshow(image);
 
 SE = strel('disk',5);
@@ -8,6 +9,7 @@ figure,imshow(circle);
 
 %find the connected components
 ccCircles = bwlabel(circle);
+figure, imagesc(ccCircles);
 
 %calculate the area for each connected componenets
 numElement = max(ccCircles(:));
@@ -31,6 +33,43 @@ for i = 1 : numElement
    circleCentroid(i,1) =  circleCentroid(i,1)/circleArea(i,1);
    circleCentroid(i,2) =  circleCentroid(i,2)/circleArea(i,1);
 end
-    
-    
+
+
+imageLine = imread('lines.jpg');
+imageLine = imbinarize(rgb2gray(imageLine),0.4);
+SE = strel('line',20,90);
+line = imopen(imageLine,SE);
+figure,imshow(line);
+ccLines = bwlabel(line);
+figure, imagesc(ccLines);
+
+%calculate the area for each connected componenets
+numElement = max(ccLines(:));
+lineArea = zeros(numElement,1);
+lineLength = zeros(numElement,3);
+
+%looping through the line image and find the area for each connected
+%componenets
+for x = 1 : size(ccLines,1)
+    for y = 1 : size(ccLines, 2)
+        if ccLines(x,y) ~= 0
+            lineArea(ccLines(x,y),1) = lineArea(ccLines(x,y),1) + 1;
+            if lineLength(ccLines(x,y),1) == 0 
+                lineLength(ccLines(x,y),1) = x;
+                lineLength(ccLines(x,y),2) = x;
+            else
+                if(x < lineLength(ccLines(x,y),1))
+                    lineLength(ccLines(x,y),1) = x;
+                else
+                    lineLength(ccLines(x,y),2) = x;
+                end
+            end
+        end
+    end
+end
+% 
+% calculating the length
+for i = 1 : numElement
+    lineLength(i,3) = lineLength(i,2) - lineLength(i,1);
+end
 
