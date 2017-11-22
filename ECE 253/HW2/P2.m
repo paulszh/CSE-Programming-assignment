@@ -1,6 +1,6 @@
 image = imread('circles_lines.jpg');
-image = rgb2gray(image);        %do we need to convert to gray scale first?
-image = imbinarize(image);
+image = rgb2gray(image);        
+image = imbinarize(image);      %convert to binary
 imshow(image);
 
 SE = strel('disk',5);
@@ -56,6 +56,7 @@ saveas(write, 'connected_component_lines.jpg');
 numElement = max(ccLines(:));
 lineArea = zeros(numElement,1);
 lineLength = zeros(numElement,3);
+lineCentroid = zeros(numElement,2);
 
 %looping through the line image and find the area for each connected
 %componenets
@@ -63,6 +64,8 @@ for x = 1 : size(ccLines,1)
     for y = 1 : size(ccLines, 2)
         if ccLines(x,y) ~= 0
             lineArea(ccLines(x,y),1) = lineArea(ccLines(x,y),1) + 1;
+            lineCentroid(ccLines(x,y),1) =  lineCentroid(ccLines(x,y),1) + x;
+            lineCentroid(ccLines(x,y),2) =  lineCentroid(ccLines(x,y),2) + y;
             if lineLength(ccLines(x,y),1) == 0 
                 lineLength(ccLines(x,y),1) = x;
                 lineLength(ccLines(x,y),2) = x;
@@ -79,6 +82,8 @@ end
 % 
 % calculating the length
 for i = 1 : numElement
-    lineLength(i,3) = lineLength(i,2) - lineLength(i,1);
+    lineLength(i,3) = lineLength(i,2) - lineLength(i,1); %calculate the length
+    lineCentroid(i,1) =  lineCentroid(i,1)/lineArea(i,1); %calculate the centroid for x
+    lineCentroid(i,2) =  lineCentroid(i,2)/lineArea(i,1); %calculate the centroid for y
 end
 
