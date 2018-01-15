@@ -1,6 +1,6 @@
 image = imread('pattern.tif');
 imwrite(uint8(image),'origin.jpg');
-%Problem 1-ii-b
+%%Problem 1-ii-b
 mostSharpen = blurOrSharpen(image, 1,1);
 mostBlurred = blurOrSharpen(image,-1,1);
 
@@ -17,14 +17,13 @@ blurred = blurOrSharpen(image,-1,10);
 imshow(uint8(blurOrSharpen(blurred,1,10)));
 saveas(tosave,'sharpenOnBlurImageSigma10.jpg');
 
-%Problem 1-ii-c
+%%Problem 1-ii-c
 result = blurOrSharpen(image,1,10);
 tosave = figure;
 imshow(uint8(result));
 saveas(tosave,'sharpenSigma10.jpg');
 
 % problem 1-iii-a
-
 brain = imread('brain.tif');
 tosave = figure;
 imshow(uint8(brain));
