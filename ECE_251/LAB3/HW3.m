@@ -10,24 +10,28 @@ tosave = figure;
 subplot(2,2,1);
 hist(uniform);
 title('Figure 1: hitogram of uniform distribution')
+xlabel('random variable');
+ylabel('occurrence');
 subplot(2,2,2);
 hist(gaussian);
 title('Figure 2: hitogram of gaussian distribution')
+xlabel('random variable');
+ylabel('occurrence');
 
 N = 256;
 m = 16;
 
 cxx_uniform = xcorr(uniform(1:N),'bias');
 subplot(2,2,3);
-stem(0:m-1, cxx_uniform(N:N+15));
-title('Uniform: autocorrelation sequence estimation')
+plot(0:m-1, cxx_uniform(N:N+15));
+title('Figure 3, Uniform: autocorrelation sequence estimation')
 xlabel('m');
 ylabel('Cxx(m)');
 
 subplot(2,2,4);
 cxx_gaussian = xcorr(gaussian(1:N),'bias');
-stem(0:m-1, cxx_gaussian(N:N+15));
-title('Gaussian: autocorrelation sequence estimation')
+plot(0:m-1, cxx_gaussian(N:N+15));
+title('Figure 4, Gaussian: autocorrelation sequence estimation')
 xlabel('m');
 ylabel('Cxx(m)');
 saveas(tosave, 'Figure1_2_3_4.jpg');
@@ -88,7 +92,7 @@ xlabel('m');
 ylabel('Cyy(m)');
 
 subplot(2,2,4);
-cxy = xcorr(input, output, 'bias');
+cxy = xcorr(output, input, 'bias');
 stem(-m+1: m-1, cxy(N-15:N+15));
 title('Figure 10: Output: autocorrelation sequence estimation');
 xlabel('m');
