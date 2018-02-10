@@ -18,7 +18,7 @@ n = 0 : NFFT - 1;
 % extracting the first 256 portion of the data
 xn = xt(1:NFFT);
 tosave = figure; 
-stem(xn);
+plot(xn);
 title('Figure 1: x(n) (n = 0, ..., 255)');
 xlabel('n');
 ylabel('amplitude');
@@ -47,7 +47,10 @@ freq_band = [0, 2 * fpc/fs, 2 * fsc/fs, 1];
 hn= firpm(n, freq_band, [1 ,1, 0, 0], [50, 1]);
 %plot hn
 tosave = figure;
-stem(hn);
+plot(hn);
+title('Figure 3: equalrippler FIR filter h(n)');
+xlabel('h(n) magnitude');
+ylabel('n');
 axis([0 64 -0.05 0.15]);
 saveas(tosave, 'figure3.jpg');
 
@@ -70,7 +73,7 @@ tosave = figure;
 plot(fk, 20 * log10(abs(hk)));
 title('Figure 5: |H(k)| db magnitude -40hz to 40hz');
 xlim([-40 40]);
-ylim([-0.04, 0.04])
+ylim([-0.01, 0.01])
 xlabel('f(Hz)');
 ylabel('db magnitude');
 saveas(tosave, 'figure 5.jpg');
