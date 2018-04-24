@@ -28,9 +28,14 @@ saveas(tosave, 'figure1.jpg');
 alpha = 2.5;
 beta = 7.85;
 kbWindow = kaiser(NFFT, beta);
+xk1 = fftshift(fft(xn));
 
 xk = fftshift(fft(xn.* kbWindow', NFFT));
 f = fs * (1/NFFT * n - 0.5);
+
+figure;
+stem(f, 20*log10(abs(xk1)));
+
 tosave = figure; 
 plot(f, 20*log10(abs(xk)));
 title('Figure 2: |X(k)| db magnitude');
@@ -128,10 +133,13 @@ fpc = 40;   %passband cutoff frequency = 40 Hz (analog)
 fsc = 85;   %stopband cutoff frequency = 85 Hz (analog)
 n = 63; % 64-coefficient, linear phase, FIR
 freq_band = [0, 2 * fpc/fs, 2 * fsc/fs, 1];
-hn= firpm(n, freq_band, [1 ,1, 0, 0], [1,200]);
+hn= firpm(n, freq_band, [1 ,1, 0, 0], [1,150]);
 %plot hn
 tosave = figure;
-stem(hn);
+plot(hn);
+title('Figure 9: equalrippler FIR filter h(n) with weighting ratio 1 : 150');
+xlabel('h(n) magnitude');
+ylabel('n');
 axis([0 64 -0.05 0.15]);
 saveas(tosave, 'figure9.jpg');
 
@@ -154,7 +162,7 @@ tosave = figure;
 plot(fk, 20 * log10(abs(hk)));
 title('Figure 11: |H(k)| db magnitude -40hz to 40hz');
 xlim([-40 40]);
-ylim([-0.04, 0.04])
+ylim([-0.25, 0.25])
 xlabel('f(Hz)');
 ylabel('db magnitude');
 saveas(tosave, 'figure11.jpg');
