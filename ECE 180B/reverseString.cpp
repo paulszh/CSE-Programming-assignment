@@ -1,3 +1,5 @@
+Zhouhang Shao   PID: A99086018
+
 #include<string.h>
 #include<malloc.h>
 #include<iostream>
@@ -5,19 +7,16 @@
 char * reverseString(const char * str) {
     int len = strlen(str);
     char *result = (char*)malloc(sizeof(char)*(len+1)); 
-
     for (int i = 0, j = len - 1; i <= j; i++, j--) {
         result[i] = str[j];
         result[j] = str[i];
     }
-    // std::cout << "original string: " << str << "   reversed string:" << result << std::endl;
     return result;
 }
 
 int main(int argc, const char * argv[]) {
-
-    const char * test_1 = "";                    // empty string
-    const char * test_2 = "zhouhang";        // even length string
+    const char * test_1 = "";                 // empty string
+    const char * test_2 = "zhouhang";     // even length string
     const char * test_3= "abc";             // odd length string
     // test for a very long string
     const char * test_4 = "dsfdsdsfdsfsdsafdsfdsf3rwrweefsasfdsfadfasfa.,,.,.sfaf093840923849032849080";
