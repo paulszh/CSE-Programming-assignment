@@ -19,9 +19,43 @@
    the expression.
 *)
 
-let rec build (rand,depth) = failwith "to be implemented"
+let rec build (rand,depth) =
+  if depth = 0 then 
+    let r = rand(0,2) in
+      if r = 0 then buildX()
+      else if r = 1 then buildY()
+      else failwith "out of range"
+  else 
+    let r = rand(0,7) in
+      match r with
+        | 0 -> buildX()
+        | 1 -> buildY()
+        | 2 -> buildSine(build(rand, depth - 1))
+        | 3 -> buildCosine(build(rand, depth - 1))
+        | 4 -> buildAverage(build(rand, depth - 1), build(rand, depth - 1))
+        | 5 -> buildTimes(build(rand, depth - 1), build(rand, depth - 1))
+        | 6 -> buildThresh(build(rand, depth - 1), build(rand, depth - 1),build(rand, depth - 1), build(rand, depth - 1))
+        | _ -> failwith "out of range"
 
-let rec build2 (rand,depth) = failwith "to be implemented"
+let rec build2 (rand,depth) = 
+  if depth = 0 then 
+    let r = rand(0,2) in
+      if r = 0 then buildX()
+      else if r = 1 then buildY()
+      else failwith "out of range"
+  else 
+    let r = rand(0,9) in
+      match r with
+        | 0 -> buildX()
+        | 1 -> buildY()
+        | 2 -> buildSine(build(rand, depth - 1))
+        | 3 -> buildCosine(build(rand, depth - 1))
+        | 4 -> buildAverage(build(rand, depth - 1), build(rand, depth - 1))
+        | 5 -> buildTimes(build(rand, depth - 1), build(rand, depth - 1))
+        | 6 -> buildThresh(build(rand, depth - 1), build(rand, depth - 1),build(rand, depth - 1), build(rand, depth - 1))
+        | 7 -> buildHalf(build(rand, depth - 1), build(rand, depth - 1))
+        | 8 -> buildQuarter(build(rand, depth - 1), build(rand, depth - 1))
+        | _ -> failwith "out of range"
 
 (* Please fill in ALL of g1,g2,g3,c1,c2,c3 regardless of whether you
  * are aiming for extra credit. 
@@ -33,14 +67,13 @@ let rec build2 (rand,depth) = failwith "to be implemented"
  * they should return (depth,seed1,seed2)
  *)
 
-let g1 () = failwith "to be implemented"  
-let g2 () = failwith "to be implemented"  
-let g3 () = failwith "to be implemented"  
+let g1 () = (6, 6, 6) 
+let g2 () = (10, 20, 30)   
+let g3 () = (1, 2, 4)  
 
-let c1 () = failwith "to be implemented"
-let c2 () = failwith "to be implemented" 
-let c3 () = failwith "to be implemented" 
-
+let c1 () = (6, 15, 95)
+let c2 () = (8, 15, 95)
+let c3 () = (12, 8, 5) 
 (**** You should not need to modify any code below here ****)
 
 

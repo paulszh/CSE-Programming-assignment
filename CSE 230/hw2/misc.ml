@@ -4,26 +4,44 @@
 
 (* ***** DOCUMENT ALL FUNCTIONS YOU WRITE OR COMPLETE ***** *)
 
-let rec assoc (d,k,l) = failwith "to be written"
-
+(* 'a * 'b * ('b * 'a) list -> 'a
+ * At each iteration, the function will first compare the key of 
+ * first element inside the list l, if matches, return value
+ * else return default value -1;
+ *)
+let rec assoc (d,k,l) = 
+  match (d, k, l) with 
+    | (d, k, []) -> d
+    | (d, k, (k', v)::l1) -> if k = k' then v else assoc(d, k, l1)
 (* fill in the code wherever it says : failwith "to be written" *)
+
+(*
+ * int list -> int list
+ * h::t check if element h is in the list seen, if it already exists continue with seen
+ * otherwise add h to seen
+ * the rest part with be t
+ *)
 let removeDuplicates l = 
   let rec helper (seen,rest) = 
       match rest with 
-        [] -> seen
+      | [] -> seen
       | h::t -> 
-        let seen' = failwith "to be written" in
-        let rest' = failwith "to be written" in 
+        let seen' = 
+          if List.mem h seen then seen else h::seen in
+        let rest' = t in 
 	  helper (seen',rest') 
   in
       List.rev (helper ([],l))
 
 
 (* Small hint: see how ffor is implemented below *)
-let rec wwhile (f,b) = failwith "to be written"
+let rec wwhile (f,b) = 
+  match f b with
+   (b', false) -> b'
+  |(b', true) -> wwhile(f, b')
 
 (* fill in the code wherever it says : failwith "to be written" *)
-let fixpoint (f,b) = wwhile ((failwith "to be written"),b)
+let fixpoint (f,b) = wwhile ((fun b' -> (f(b'), f(b') != b')),b)
 
 
 (* ffor: int * int * (int -> unit) -> unit
