@@ -1,0 +1,10 @@
+### Starting build.
+# Target: test.ml.depends, tags: { extension:ml, file:test.ml, ocaml, ocamldep, quiet }
+ocamldep.opt -modules test.ml > test.ml.depends
+# Target: test.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:test.cmo, file:test.ml, implem, ocaml, quiet }
+ocamlc.opt -c -o test.cmo test.ml
++ ocamlc.opt -c -o test.cmo test.ml
+File "test.ml", line 2, characters 0-1:
+Error: Syntax error
+Command exited with code 2.
+# Compilation unsuccessful.
