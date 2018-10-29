@@ -54,7 +54,7 @@ let rec build2 (rand,depth) =
         | 5 -> buildTimes(build(rand, depth - 1), build(rand, depth - 1))
         | 6 -> buildThresh(build(rand, depth - 1), build(rand, depth - 1),build(rand, depth - 1), build(rand, depth - 1))
         | 7 -> buildHalf(build(rand, depth - 1), build(rand, depth - 1))
-        | 8 -> buildQuarter(build(rand, depth - 1), build(rand, depth - 1))
+        | 8 -> buildQuarter(build(rand, depth - 1), build(rand, depth - 1), build(rand, depth - 1))
         | _ -> failwith "out of range"
 
 (* Please fill in ALL of g1,g2,g3,c1,c2,c3 regardless of whether you
@@ -67,9 +67,9 @@ let rec build2 (rand,depth) =
  * they should return (depth,seed1,seed2)
  *)
 
-let g1 () = (6, 6, 6) 
-let g2 () = (10, 20, 30)   
-let g3 () = (1, 2, 4)  
+let g1 () = (6, 73, 1) 
+let g2 () = (10, 93, 8)   
+let g3 () = (5, 20, 40)  
 
 let c1 () = (6, 15, 95)
 let c2 () = (8, 15, 95)

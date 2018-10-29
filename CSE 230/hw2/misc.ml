@@ -34,13 +34,16 @@ let removeDuplicates l =
       List.rev (helper ([],l))
 
 
-(* Small hint: see how ffor is implemented below *)
+(* wwhile : (int -> int * bool) * int -> int (or more generally, ('a -> 'a * bool) * 'a -> 'a ) *)
 let rec wwhile (f,b) = 
   match f b with
    (b', false) -> b'
   |(b', true) -> wwhile(f, b')
 
-(* fill in the code wherever it says : failwith "to be written" *)
+(* 
+ * (int -> int) * int -> int (or more generally, ('a -> 'a) * 'a -> 'a) which repeatedly updates 
+ * b with f(b) until b=f(b) and then returns b. 
+ *)
 let fixpoint (f,b) = wwhile ((fun b' -> (f(b'), f(b') != b')),b)
 
 
