@@ -280,4 +280,52 @@ let stretch xs =
 
 (* sum_matrix: given a matrix, sum up the values in the matrix.
 *)
-let sum_matrix mat 
+let sumList l = 
+  let base = 0 in
+  let worker acc next=
+    acc + next;
+  in
+  fold worker base l;;
+
+let sumMatrix mat =
+  let base = 0 in
+  let worker acc next =
+    acc + (sumList next)
+  in 
+  fold worker base l;;
+
+let sumMatrix_2 mat =
+  let base = 0 in
+  let sumList acc_l next_l =
+    let base2 = acc_l in
+    let worker acc_e next =
+      acc_e + next
+    in
+    fold worker base2 next_l
+  in
+  fold sumList base mat;;
+
+
+let sumMatrix_3 mat = 
+  let sumList l = 
+    let base = 0 in
+    let worker acc next = 
+      acc + next
+    in
+    fold worker base l
+  in 
+  let base = 0 in
+  let worker acc next = 
+    acc + (sumList next)
+  in 
+  fold worker base mat;;
+
+let sumMatrix_4 mat = 
+  let sumList l = 
+    let base = 0 in
+    let worker acc next = 
+      acc + next
+    in
+    fold worker base l
+  in 
+  map 

@@ -47,3 +47,39 @@ let worker acc next =
         | h::t -> if h = x2 then x1+1 else x1
 in
 List.fold_left worker base l;;
+
+
+
+
+let rec convertToList t =
+        match t with
+        |  Leaf l -> [l]
+        |  Node(l1,  l2)-> (convertToList l1) @ (convertToList l2)        
+
+
+let f1 x = x + 1;;
+
+let f2 x = x * 2;;
+
+let f3 x = x + 3;;
+
+let t = Node(Leaf f1, Node(Leaf f2, Leaf f3));;
+
+type 'a fun_tree =                                            │
+│       | Leaf of ('a -> 'a)                                                   │
+│       | Node of ('a fun_tree) * ('a fun_tree);;
+
+let f acc elmt = (elmt acc) in let base = 0 in
+List.fold_left f base (convertToList t);;
+
+(* Next is a function, the converToList t function convert the tree of function to list of function*)
+let applyToAll t v = 
+    let rec convertToList t =
+        match t with
+        |  Leaf l -> [l]
+        |  Node(l1,  l2)-> (convertToList l1) @ (convertToList l2)
+    in
+    let base = 0 in
+    let worker acc next = acc next in
+    List.fold_left worker base (convertToList t)
+        
