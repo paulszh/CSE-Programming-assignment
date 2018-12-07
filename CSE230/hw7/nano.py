@@ -91,7 +91,7 @@ class Var(Expression):
     def __init__(self, v: str):
         self.v = v
     def toProlog(self) -> str:
-        return self.v
+        return 'var(' + self.v + ')'
     
 class Bin(Expression):
     def __init__(self, l: Expression, o: Bop, r:Expression):

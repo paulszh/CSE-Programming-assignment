@@ -17,12 +17,68 @@ class profiled(object):
 class traced(object):
     def __init__(self,f):
         # replace this and fill in the rest of the class
-        self.__name__="NOT_IMPLEMENTED"
+        self.__name__= f.__name__
+        self.f = f
+        self.level = 0
+
+    def __call__(self, *args, **kwargs):
+        try:
+            currline = ""
+            nextline = ""
+            if self.level > 0:
+                for i in range(0,self.level):
+                    currline += ("| ")
+            currline += ",- " + self.__name__ + "("
+        
+            if args:
+                for arg in args:
+                    currline += str(arg) + ", "
+                    
+            if kwargs:
+                for arg in kwargs:
+                    currline += arg + "=" + str(kwargs[arg]) + ", "
+        
+            currline = currline[:-2]
+            print (currline + ")")
+            
+            if self.level > 0:
+                for i in range(0,self.level):
+                    nextline += ("| ")
+            nextline += "`- "
+            
+            self.level += 1
+            result = self.f(*args, **kwargs)
+            nextline += str(result)
+            print (nextline)
+            self.level -= 1
+            return result 
+            
+        except Exception as e:
+            self.level -= 1
+            raise e
+        
+        
+        
 
 class memoized(object):
     def __init__(self,f):
         # replace this and fill in the rest of the class
-        self.__name__="NOT_IMPLEMENTED"
+        self.__name__= f.__name__
+        self.f = f
+        self.cache = {}
+        
+    def  __call__(self,*args, **kwargs):
+        key = str(args) + str(kwargs)
+        if key not in self.cache:
+            try:
+                self.cache[key] = self.f(*args, **kwargs)
+            except Exception as e:
+                self.cache[key] = e
+        
+        if isinstance(self.cache[key], Exception):
+            raise self.cache[key]
+        return self.cache[key]
+        
 
 # run some examples.  The output from this is in decorators.out
 def run_examples():
