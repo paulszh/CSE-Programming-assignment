@@ -14,6 +14,13 @@ class profiled(object):
     def reset(self):
         self.__count=0
 
+'''
+Traced Decorator
+When the decorated function is called, the decorator should print out an ASCII art tree of the recursive calls and 
+their return values.The return value of the function should be return to the caller after all printing is complete. 
+If an exception occurs in the funciton, the nesting level must be adjusted to the appropriate level where the 
+exception is caught.
+'''
 class traced(object):
     def __init__(self,f):
         # replace this and fill in the rest of the class
@@ -50,16 +57,27 @@ class traced(object):
             result = self.f(*args, **kwargs)
             nextline += str(result)
             print (nextline)
+            #backtracking
             self.level -= 1
-            return result 
+            # if (self.level == 0):
+            #     print(result)
+            return result
             
         except Exception as e:
+            # Handle the exception
             self.level -= 1
             raise e
         
         
         
-
+'''
+Memoized decorator
+When the decorated function is called, the decorator should check to see if the function has already been called with 
+the given arguments. If so, the decorator should return the value the the function returned when it was last called 
+with the given arguments. If the function last threw an exception when called with the given arguments, the same 
+exception should be thrown again. If the function has not been called with the given arguments, then call it and 
+record the return value or exception. Then return the return value or raise the thrown exception.
+'''
 class memoized(object):
     def __init__(self,f):
         # replace this and fill in the rest of the class

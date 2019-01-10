@@ -181,3 +181,15 @@ manner, i.e. from left-to-right. Don't think too much about it.)
 
 
 *)
+
+let contains l i = Map.fold_left (map)
+
+let rev_srq = fold (fun acc next -> [next]@acc) [] (map (fun x -> x * x) l);;
+
+(* Use map and fold to implement insert_sum L int list list -> int list list,
+which inserts sum at the beginning of each list. For example, insert_sums 
+[[1;2;3];[4;5;6]] returns [[6;1;2;3];[15;4;5;6]]*)
+let insert_sum l = 
+  let worker acc next = acc + next in 
+    let worker2 sl = (fold worker 0 sl)::sl in
+      map worker2 l 

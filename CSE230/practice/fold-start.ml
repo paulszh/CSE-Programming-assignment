@@ -1,4 +1,4 @@
-(*
+ (*
 
 For this section, we will cover map and fold_left in detail. The outline:
 
