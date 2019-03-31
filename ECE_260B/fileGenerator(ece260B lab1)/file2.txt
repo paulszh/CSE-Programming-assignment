@@ -1,0 +1,11 @@
+* the total delay from p0 to OUT
+.measure tran rise_delay trig v(p0) val=0.6 rise=1 targ v(OUT) val=0.6 rise=1
+* power estimation (for interconnect length of 2.5mm)
+.measure tran iavg avg i(VDD) from 500p to 650p 
+* power estimation (for interconnect length of 9mm)
+*.measure tran iavg avg i(VDD) from 500p to 1000p 
+.measure power param='-1.0*iavg*1.2'
+
+.tran 1p 5000p 
+
+.end

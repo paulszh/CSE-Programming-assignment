@@ -1,0 +1,216 @@
+Load RC corner of view WC_VIEW
+
+Begin Power Analysis
+
+    0.00V	    gnd
+    0.00V	    vdd
+    0.00V	    VSS
+    0.70V	    VDD
+
+Warning:
+  There are 4 power/gnd nets that are not connected
+gnd vdd VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+** WARN:  (VOLTUS_POWR-2035): There are 4 power/gnd nets that are not connected
+gnd vdd VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+
+
+
+Begin Processing Timing Library for Power Calculation
+
+Begin Processing Timing Library for Power Calculation
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=879.21MB/879.21MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+CK: assigning clock clk to net clk
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=879.21MB/879.21MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=879.21MB/879.21MB)
+
+Begin Processing Signal Activity
+
+
+Starting Levelizing
+2018-Mar-03 18:02:40 (2018-Mar-04 02:02:40 GMT)
+2018-Mar-03 18:02:40 (2018-Mar-04 02:02:40 GMT): 10%
+2018-Mar-03 18:02:40 (2018-Mar-04 02:02:40 GMT): 20%
+2018-Mar-03 18:02:40 (2018-Mar-04 02:02:40 GMT): 30%
+2018-Mar-03 18:02:40 (2018-Mar-04 02:02:40 GMT): 40%
+2018-Mar-03 18:02:40 (2018-Mar-04 02:02:40 GMT): 50%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 60%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 70%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 80%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 90%
+
+Finished Levelizing
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT)
+
+Starting Activity Propagation
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT)
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 10%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 20%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 30%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 40%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 50%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 60%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 70%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 80%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 90%
+
+Finished Activity Propagation
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total)=881.26MB/881.26MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 137
+      # of cell(s) missing leakage table: 0
+      # of MSMV cell(s) missing power_level: 0
+      ----------------------------------------------------------
+CellName                                  Missing Table(s)
+ao12f01                                   internal power, 
+ao12f02                                   internal power, 
+ao12f04                                   internal power, 
+ao12f06                                   internal power, 
+ao12f08                                   internal power, 
+ao12m01                                   internal power, 
+ao12m02                                   internal power, 
+ao12m04                                   internal power, 
+ao12m08                                   internal power, 
+ao12s01                                   internal power, 
+ao12s02                                   internal power, 
+ao22f01                                   internal power, 
+ao22m01                                   internal power, 
+ao22m02                                   internal power, 
+ao22m04                                   internal power, 
+ao22s01                                   internal power, 
+ao22s02                                   internal power, 
+ao22s03                                   internal power, 
+ao22s04                                   internal power, 
+in01f01                                   internal power, 
+first few are printed here, for detail please refer voltus.logv
+
+
+
+Starting Calculating power
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT)
+ ... Calculating switching power
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 10%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 20%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 30%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 40%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 50%
+ ... Calculating internal and leakage power
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 60%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 70%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 80%
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT): 90%
+
+Finished Calculating power
+2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT)
+Ended Power Computation: (cpu=0:00:01, real=0:00:00, mem(process/total)=881.26MB/881.26MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=881.26MB/881.26MB)
+
+Ended Power Analysis: (cpu=0:00:01, real=0:00:01, mem(process/total)=881.26MB/881.26MB)
+
+Begin Static Power Report Generation
+*----------------------------------------------------------------------------------------
+*	Innovus 15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+*	
+*
+* 	Date & Time:	2018-Mar-03 18:02:41 (2018-Mar-04 02:02:41 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: mpeg2_top
+*
+*	Liberty Libraries used:
+*	        WC_VIEW: /home/linux/ieng6/ee260b/public/data/libraries/lib/contest.lib
+*
+*	Power Domain used:
+*
+*       Power View : WC_VIEW
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: N.A.
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-12 secs
+*
+*       report_power
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.00000000 	    0.0000%
+Total Switching Power:       2.55186953 	    4.1643%
+Total Leakage Power:        58.72749893 	   95.8357%
+Total Power:                61.27936840
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                             0      0.9597           0      0.9597       1.566
+Macro                                  0           0           0           0           0
+IO                                     0           0           0           0           0
+Combinational                          0       1.592       58.73       60.32       98.43
+Clock (Combinational)                  0           0           0           0           0
+Clock (Sequential)                     0           0           0           0           0
+-----------------------------------------------------------------------------------------
+Total                                  0       2.552       58.73       61.28         100
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Default                   0.7          0       2.552       58.73       61.28         100
+ 
+ 
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+* 		Highest Average Power:                FE_RC_33_0 (ao12f08): 	    0.3893
+* 		Highest Leakage Power:                FE_RC_33_0 (ao12f08): 	     0.384
+* 		Total Cap: 	6.25107e-11 F
+* 		Total instances in design: 14172
+* 		Total instances in design with no power:     0
+*                Total instances in design with no activty:     0
+
+* 		Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+ 
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total)=881.73MB/881.73MB)
+

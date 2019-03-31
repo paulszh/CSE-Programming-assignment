@@ -1,0 +1,24 @@
+* buffered net sim
+.include '65nm_bulk.pm'
+.include 'invx4.cdl'
+.include 'invx8.cdl'
+.include 'invx16.cdl'
+.include 'invx32.cdl'
+
+.OPTIONS LIST NODE POST
+.OPTION METHOD=GEAR
+.OP
+
+VSS VSS 0 DC 0V
+VDD VDD VSS DC 1.2V
+VI IN 0 pwl( 0 0v 500p 0v 510p 1.2v 5000p 1.2v )
+
+.subckt interconnect_segment A B
+rDis1 A B 2
+cDis1 B 0 6.15e-14
+.ends
+
+* subckt instantiations must start with the character 'x'
+* do not modify the following two lines
+xInvA IN pInt1 VDD VSS INVX32
+xInvB pInt1 p0 VDD VSS INVX32

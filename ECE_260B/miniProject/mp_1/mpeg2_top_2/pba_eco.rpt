@@ -1,0 +1,292 @@
+Warning: Some timing arcs have been disabled for breaking timing loops
+	or because of constant propagation. Use the 'report_disable_timing'
+	command to get the list of these disabled timing arcs. (PTE-003)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_31_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_30_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_28_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_31_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_30_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_28_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_27_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_27_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_24_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_24_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_23_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_23_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_21_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_21_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_22_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_22_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_17_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_17_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_16_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_16_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_15_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_15_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_13_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_13_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_12_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_12_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_8_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_8_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_6_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_6_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_7_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_7_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_5_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_5_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_4_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_4_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_3_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_3_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_2_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_2_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_1_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_1_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_0_/ck-->o (min rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+Warning: The drive-resistance for the timing arc
+         (contest/ms00f80) regtop_v1_hdi00_d_reg_0_/ck-->o (max rising & falling rising_edge)
+         is much less than the network impedance to ground;
+         PrimeTime has adjusted the drive-resistance to improve accuracy.
+ (RC-009)
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-pba_mode exhaustive
+	-sort_by slack
+Design : mpeg2_top
+Version: K-2015.06-SP3-1
+Date   : Sun Mar  4 22:09:15 2018
+****************************************
+
+Warning: Exhaustive path-based analysis may take a long time using the current PrimeTime settings. Try using the following settings, which may reduce the runtime of the analysis:
+         - Use the -slack_lesser_than option (UITE-479)
+
+  Startpoint: regtop_g_a_r_reg_4_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regtop_v1_hpb_rd_reg_5_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max  (recalculated)
+
+  Point                                    Incr       Path
+  ---------------------------------------------------------------
+  clock clk (rise edge)                0.000000   0.000000
+  clock network delay (ideal)          0.000000   0.000000
+  regtop_g_a_r_reg_4_/ck (ms00f80)     0.000000   0.000000 r
+  regtop_g_a_r_reg_4_/o (ms00f80)      16.383238 &
+                                                  16.383238 r
+  U261926/o (no02m02)                  51.515278 &
+                                                  67.898516 f
+  U262933/o (in01m01)                  44.541901 &
+                                                  112.440416 r
+  U261757/o (no02m03)                  50.524246 &
+                                                  162.964663 f
+  U261715/o (in01s03)                  60.609142 &
+                                                  223.573805 r
+  U265588/o (no03s10)                  55.259693 &
+                                                  278.833498 f
+  U268557/o (na02s01)                  39.129066 &
+                                                  317.962564 r
+  U268558/o (in01m01)                  62.061489 &
+                                                  380.024054 f
+  U268581/o (ao22m01)                  97.251228 &
+                                                  477.275282 r
+  U261572/o (na04m01)                  168.140594 &
+                                                  645.415876 f
+  U263211/o (no04m03)                  120.926315 &
+                                                  766.342192 r
+  U263210/o (na03m06)                  58.381958 &
+                                                  824.724150 f
+  regtop_v1_hpb_rd_reg_5_/d (ms00f80)  0.696972 & 825.421121 f
+  data arrival time                               825.421121
+
+  clock clk (rise edge)                840.000000 840.000000
+  clock network delay (ideal)          0.000000   840.000000
+  clock reconvergence pessimism        0.000000   840.000000
+  regtop_v1_hpb_rd_reg_5_/ck (ms00f80)            840.000000 r
+  library setup time                   0.000000   840.000000
+  data required time                              840.000000
+  ---------------------------------------------------------------
+  data required time                              840.000000
+  data arrival time                               -825.421121
+  ---------------------------------------------------------------
+  slack (MET)                                     14.578878
+
+Information: Recalculated 21 paths and returned 1 paths.The maximum number of paths recalculated at an endpoint was 5.
+
+1

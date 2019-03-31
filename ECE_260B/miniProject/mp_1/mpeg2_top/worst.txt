@@ -1,0 +1,2 @@
+Error: path_collection cannot be used with any other path search option. (UITE-423)
+0

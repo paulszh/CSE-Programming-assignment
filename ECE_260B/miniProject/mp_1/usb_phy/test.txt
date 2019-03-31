@@ -1,0 +1,6 @@
+Name Roll_number Subject Experiment_name Marks Result
+Joy  23          Science Exp related to magnet 45 pass
+Adi  12          Science Exp electronics       48 pass
+kumar 18         Maths   prime numbers         49 pass
+Piya 19          Maths   number roots          47 pass
+Ron 28           Maths   decimal numbers       12 fail

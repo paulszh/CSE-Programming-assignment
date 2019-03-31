@@ -1,0 +1,25 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+Options:	-nowin -init eva_pt.tcl 
+Date:		Tue Feb 27 23:44:53 2018
+Host:		ieng6-ece-20.ucsd.edu (x86_64 w/Linux 2.6.32-696.18.7.el6.x86_64) (4cores*8cpus*Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz 20480KB)
+OS:		CentOS release 6.9 (Final)
+
+License:
+		invs	Innovus Implementation System	15.2	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+Sourcing file "eva_pt.tcl" ...
+<CMD> set timing_remove_clock_reconvergence_pessimism true
+<CMD> set search_path {. }
+**ERROR: (IMPSYT-6692):	Invalid return code while executing 'eva_pt.tcl' was returned and script processing was stopped. Review the following error in 'eva_pt.tcl' then restart.
+**ERROR: (IMPSYT-6693):	Error message: eva_pt.tcl: invalid command name "read_verilog".
+**INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+Innovus terminated by user interrupt.
